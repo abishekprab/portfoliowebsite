@@ -1,0 +1,37 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+section {
+  padding-top: 60px;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Hero background parallax effect */
+header {
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=1200&q=80') no-repeat center center/cover;
+  background-attachment: fixed;
+  transition: background-position 0.2s ease;
+}
+
+/* Card hover animation */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

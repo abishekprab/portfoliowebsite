@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Three | My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MyPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="bg-light py-2">
+    <div class="container">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Project Three</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Project Details -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Project Three</h2>
+      <img src="image.png" class="img-fluid mb-4" alt="Project Screenshot" />
+      <p>
+        A simple to-do list app made with React.js. This app supports task addition, completion, and deletion with local storage support.
+      </p>
+      <ul>
+        <li>Built with React functional components</li>
+        <li>State management using hooks</li>
+        <li>Persistent data using `localStorage`</li>
+      </ul>
+      <a href="#" class="btn btn-primary mt-3" target="_blank">Live Demo</a>
+      <a href="#" class="btn btn-secondary mt-3" target="_blank">GitHub Repo</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="text-center">Contact</h2>
+      <form class="row g-3 mt-4">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Name" required />
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Email" required />
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" rows="4" placeholder="Your message..." required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-light">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-secondary text-white">
+    <p>&copy; 2025 Abishek Prabakaran R. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
