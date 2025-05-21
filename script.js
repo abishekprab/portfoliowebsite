@@ -101,29 +101,34 @@ document.addEventListener("mousemove", e => {
   hero.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-      gsap.fromTo("#html-counter", { innerText: 0 }, {
-        innerText: 90,
-        duration: 2,
-        ease: "power1.inOut",
-        snap: "innerText",
-      });
-      gsap.fromTo("#css-counter", { innerText: 0 }, {
-        innerText: 85,
-        duration: 2.5,
-        ease: "power1.inOut",
-        snap: "innerText",
-      });
-      gsap.fromTo("#js-counter", { innerText: 0 }, {
-        innerText: 80,
-        duration: 2,
-        ease: "power1.inOut",
-        snap: "innerText",
-      });
-      gsap.fromTo("#react-counter", { innerText: 0 }, {
-        innerText: 75,
-        duration: 2,
-        ease: "power1.inOut",
-        snap: "innerText",
-      });
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from("#about", {
+      scrollTrigger: "#about",
+      opacity: 0,
+      y: 50,
+      duration: 1
+    });
+
+    gsap.from("#skills .col-md-3", {
+      scrollTrigger: "#skills",
+      opacity: 0,
+      y: 30,
+      duration: 0.5,
+      stagger: 0.2
+    });
+
+    gsap.from("#projects .card", {
+      scrollTrigger: "#projects",
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      stagger: 0.2
+    });
+
+    gsap.from("#contact form", {
+      scrollTrigger: "#contact",
+      opacity: 0,
+      y: 30,
+      duration: 1
     });
