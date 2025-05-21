@@ -101,4 +101,29 @@ document.addEventListener("mousemove", e => {
   hero.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
 });
 
-
+document.addEventListener("DOMContentLoaded", () => {
+      gsap.fromTo("#html-counter", { innerText: 0 }, {
+        innerText: 90,
+        duration: 2,
+        ease: "power1.inOut",
+        snap: "innerText",
+      });
+      gsap.fromTo("#css-counter", { innerText: 0 }, {
+        innerText: 85,
+        duration: 2.5,
+        ease: "power1.inOut",
+        snap: "innerText",
+      });
+      gsap.fromTo("#js-counter", { innerText: 0 }, {
+        innerText: 80,
+        duration: 2,
+        ease: "power1.inOut",
+        snap: "innerText",
+      });
+      gsap.fromTo("#react-counter", { innerText: 0 }, {
+        innerText: 75,
+        duration: 2,
+        ease: "power1.inOut",
+        snap: "innerText",
+      });
+    });

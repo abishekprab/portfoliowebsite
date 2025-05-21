@@ -1,37 +1,40 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-}
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-section {
-  padding-top: 60px;
-}
+    header {
+      background: linear-gradient(to bottom right, rgba(0, 123, 255, 0.85), rgba(0, 86, 179, 0.9)), url('hero-bg.jpg') no-repeat center center/cover;
+    }
 
-.card img {
-  height: 200px;
-  object-fit: cover;
-}
-/* Reveal animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Hero background parallax effect */
-header {
-  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=1200&q=80') no-repeat center center/cover;
-  background-attachment: fixed;
-  transition: background-position 0.2s ease;
-}
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
 
-/* Card hover animation */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    textarea,
+    input {
+      border-radius: 8px;
+    }
+
+    .btn-primary,
+    .btn-light {
+      border-radius: 20px;
+      padding: 8px 24px;
+    }
+
+    footer {
+      font-size: 0.9rem;
+    }
+
+    .skill-bar {
+      font-weight: 600;
+    }
