@@ -101,43 +101,61 @@ document.addEventListener("mousemove", e => {
   hero.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
 });
 
-    gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from("#about", {
-      scrollTrigger: "#about",
-      opacity: 0,
-      y: 50,
-      duration: 1
-    });
+gsap.from("#about", {
+  scrollTrigger: "#about",
+  opacity: 0,
+  y: 50,
+  duration: 1
+});
 
-    gsap.from("#skills .col-md-3", {
-      scrollTrigger: "#skills",
-      opacity: 0,
-      y: 30,
-      duration: 0.5,
-      stagger: 0.2
-    });
+gsap.from("#skills .col-md-3", {
+  scrollTrigger: "#skills",
+  opacity: 0,
+  y: 30,
+  duration: 0.5,
+  stagger: 0.2
+});
 
-    gsap.from("#projects .card", {
-      scrollTrigger: "#projects",
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      stagger: 0.2
-    });
+gsap.from("#projects .card", {
+  scrollTrigger: "#projects",
+  opacity: 0,
+  y: 50,
+  duration: 0.8,
+  stagger: 0.2
+});
 
-    gsap.from("#contact form", {
-      scrollTrigger: "#contact",
-      opacity: 0,
-      y: 30,
-      duration: 1
-    });
+gsap.from("#contact form", {
+  scrollTrigger: "#contact",
+  opacity: 0,
+  y: 30,
+  duration: 1
+});
 // form submit prevent default
 document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
-      form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Stop page reload
-        alert("Form submitted successfully!");
-        form.reset(); // Optional: Reset form fields
-      });
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Stop page reload
+    alert("Form submitted successfully!");
+    form.reset(); // Optional: Reset form fields
+  });
+});
+// dark mode
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("darkModeToggle");
+    const icon = toggle.querySelector("i");
+
+    // Load saved mode
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      icon.classList.replace("fa-moon", "fa-sun");
+    }
+
+    toggle.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      icon.classList.replace(isDark ? "fa-moon" : "fa-sun", isDark ? "fa-sun" : "fa-moon");
     });
+  });

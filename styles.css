@@ -1,60 +1,102 @@
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-    }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --section-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --nav-bg: #212529;
+  --footer-bg: #6c757d;
+}
 
-    section {
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
+/* Dark mode variables */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --section-bg: #1e1e1e;
+  --card-bg: #2a2a2a;
+  --nav-bg: #000000;
+  --footer-bg: #222222;
+}
 
-    header {
-      background: linear-gradient(to bottom right, rgba(0, 123, 255, 0.85), rgba(0, 86, 179, 0.9)), url('hero-bg.jpg') no-repeat center center/cover;
-    }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-    .navbar-nav .nav-link.active {
-      font-weight: bold;
-      color: #ffc107 !important;
-    }
+  .bg-light {
+    background-color: var(--section-bg) !important;
+  }
 
-    .navbar-brand {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
+  .bg-dark {
+    background-color: var(--nav-bg) !important;
+  }
 
-    .progress {
-      height: 20px;
-    }
+  .bg-secondary {
+    background-color: var(--footer-bg) !important;
+  }
 
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
+  header {
+    background: linear-gradient(to bottom right, rgba(0, 123, 255, 0.85), rgba(0, 86, 179, 0.9)), url('hero-bg.jpg') no-repeat center center/cover;
+  }
 
-    textarea,
-    input {
-      border-radius: 8px;
-    }
+  .navbar {
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-    .btn-primary,
-    .btn-light {
-      border-radius: 20px;
-      padding: 8px 24px;
-    }
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #ffc107 !important;
+  }
 
-    footer {
-      font-size: 0.9rem;
-      transition: 0.3s;
-    }
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
 
-    footer a:hover {
-      color: #ffc107 !important;
-    }
+  .progress {
+    height: 20px;
+  }
 
-    .skill-bar {
-      font-weight: 600;
-    }
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  textarea,
+  input {
+    border-radius: 8px;
+  }
+
+  .btn-primary,
+  .btn-light {
+    border-radius: 20px;
+    padding: 8px 24px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  footer a:hover {
+    color: #ffc107 !important;
+  }
+
+  .skill-bar {
+    font-weight: 600;
+  }
