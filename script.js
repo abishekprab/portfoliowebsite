@@ -133,9 +133,11 @@ document.addEventListener("mousemove", e => {
       duration: 1
     });
 // form submit prevent default
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent page reload
-    alert("Form submitted successfully!");
-    // Optionally, you can clear the form after submission:
-    this.reset();
-  });
+document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop page reload
+        alert("Form submitted successfully!");
+        form.reset(); // Optional: Reset form fields
+      });
+    });
