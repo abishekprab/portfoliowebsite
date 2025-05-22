@@ -132,3 +132,10 @@ document.addEventListener("mousemove", e => {
       y: 30,
       duration: 1
     });
+// form submit prevent default
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent page reload
+    alert("Form submitted successfully!");
+    // Optionally, you can clear the form after submission:
+    this.reset();
+  });
