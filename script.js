@@ -141,21 +141,3 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset(); // Optional: Reset form fields
   });
 });
-// dark mode
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("darkModeToggle");
-    const icon = toggle.querySelector("i");
-
-    // Load saved mode
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-mode");
-      icon.classList.replace("fa-moon", "fa-sun");
-    }
-
-    toggle.addEventListener("click", function () {
-      document.body.classList.toggle("dark-mode");
-      const isDark = document.body.classList.contains("dark-mode");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-      icon.classList.replace(isDark ? "fa-moon" : "fa-sun", isDark ? "fa-sun" : "fa-moon");
-    });
-  });

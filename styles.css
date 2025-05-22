@@ -1,40 +1,9 @@
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --section-bg: #f8f9fa;
-  --card-bg: #ffffff;
-  --nav-bg: #212529;
-  --footer-bg: #6c757d;
-}
-
-/* Dark mode variables */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f1f1f1;
-  --section-bg: #1e1e1e;
-  --card-bg: #2a2a2a;
-  --nav-bg: #000000;
-  --footer-bg: #222222;
-}
-
   body {
     font-family: 'Segoe UI', sans-serif;
     scroll-behavior: smooth;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-  }
-
-  .bg-light {
-    background-color: var(--section-bg) !important;
-  }
-
-  .bg-dark {
-    background-color: var(--nav-bg) !important;
-  }
-
-  .bg-secondary {
-    background-color: var(--footer-bg) !important;
   }
 
   section {
